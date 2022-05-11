@@ -1,0 +1,780 @@
+// Variables
+$colorPrimarioTexto: white;
+$colorSecundarioTexto: rgb(241, 159, 122);
+$colorTerciarioTexto: rgb(250,207,48);
+$colorRojoTexto: rgb(255, 73, 73);
+$backgroundColor: rgb(190, 36, 36);
+$backgroundColorSecundario: rgb(195, 34, 28);
+$backgroundColorTerciario: rgb(214, 119, 71);
+
+body{
+    background-color: $backgroundColor;
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    display: grid;
+    grid-template-rows: auto auto;
+    text-align: center;
+    background-color: $backgroundColorSecundario;
+    color: $colorPrimarioTexto;
+    a{
+        font-size: larger;
+    }
+    .navbar-brand{
+        font-size: larger;
+    }
+    .bg-light {
+        --bs-bg-opacity: 0;
+        background-color: $backgroundColorSecundario!important;
+    }
+    .navbar-light .navbar-brand {
+        color: $colorPrimarioTexto;
+        &:hover{
+            color: black;
+        }
+    }
+    .navbar-light .navbar-nav .nav-link {
+        color: $colorPrimarioTexto;
+        &:hover{
+            color: black;
+        }
+    }
+    .dropdown-menu{
+        background-color: $backgroundColorSecundario;  
+        color: $colorPrimarioTexto;
+        &:hover{
+            color: black;
+        }
+    }
+    .dropdown-item{
+        color: $colorPrimarioTexto;
+        &:hover{
+            color: black;
+            background-color: $backgroundColorSecundario;
+            &.active{
+                color: $colorTerciarioTexto;
+                &:hover{
+                    color: black;
+                }
+            }
+        }
+    }
+
+    .dropdown-item.active, .dropdown-item:active {
+        color: $colorTerciarioTexto;
+        text-decoration: none;
+        background-color: $backgroundColorSecundario;
+    }
+
+    .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+        color: $colorPrimarioTexto;
+        &:hover{
+            color: black;
+        }
+        &.active{
+            color: $colorTerciarioTexto;
+            &:hover{
+                color: black;
+            }
+        }
+    }
+
+    .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+        color: $colorPrimarioTexto;
+    }
+
+    .navbar-brand{
+        &:focus{
+            color: $colorPrimarioTexto;
+        }
+    }
+
+    nav{
+        .nav-imagen{
+            width: 8%;
+            margin-left: 1%;
+        }
+    }
+
+    .navbar-light .navbar-nav .nav-link:hover{
+        color: black;
+    }
+}
+
+.presentacion{
+    display: grid;
+    grid-template-areas: 
+    "imagen-top imagen-top imagen-top"
+    "titulos titulos alan";
+    background-image: url("../fotos/fondo.jpg");
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $colorPrimarioTexto;
+    .titulos{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 20%;
+        margin-right: 18%;
+        grid-area: titulos;
+        .guerra{
+            color: $colorRojoTexto;
+        }
+    }
+    .imagen{
+        // background-image: url("../fotos/fondo3.jpg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        grid-area: alan;
+    }
+    .imagen-top{
+        // background-image: url("../fotos/fondo2.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 23px;
+        grid-area: imagen-top;
+    }
+}
+
+.video{
+    // display: grid;
+    // grid-template-areas: 
+    // "titulos trailer";
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: $colorPrimarioTexto;
+    .video-titulos{
+        grid-area: titulos;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // margin-left: 15%;
+        .futuro{
+            color: $colorRojoTexto;
+        }
+        h5{
+            color: $colorTerciarioTexto;
+        }
+    }
+    .video-trailer{
+        height: 250px;
+        grid-area: trailer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 15%;
+        iframe{
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+}
+
+// .carrusel{
+//     max-width: 100%;
+//     max-height: 100%;
+//     width: auto;
+//     height: auto;
+//     margin-left: 35%;
+//     margin-right: 35%;
+//     color: black;
+//     margin-top: 1%;
+//     .carrusel-titulos{
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+//         align-items: center;
+//         // margin-top: 10%;
+//     }
+//     h4{
+//         color: black;
+//     }
+//     h5{
+//         color: black;
+//     }
+//     .carousel{
+//         height: 600px;
+//     }
+//     img{
+//         .w-100{
+//             width: auto;
+//         }
+//     }
+//     .carousel-caption {
+//         right: 0;
+//         left: 0;
+//         padding-top: 0;
+//         padding-bottom: 0;
+//     }
+// }
+
+.carrusel-padre{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    .carrusel{
+        height: 50%;
+        width: 50%;
+    }
+}
+
+.conoceme{
+    height: 633px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: $colorPrimarioTexto;
+    margin-top: 5%;
+    background-image: url("../fotos/conoceme.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    h1{
+        color: $colorSecundarioTexto;
+    }
+    .conoceme-titulos-y-texto{
+        margin-left: 15%;
+    }
+    .conoceme-texto{
+        margin-top: 5%;
+    }
+}
+
+.opiniones{
+    margin-top: 5%;
+    display: grid;
+    grid-template-areas: 
+    "titulo titulo titulo"
+    "joan peter hugh";
+    color: $colorPrimarioTexto;
+    .opiniones-titulos{
+        grid-area: titulo;
+    }
+    h5{
+        color: $colorRojoTexto;
+    }
+    .opiniones-joan{
+        margin-top: 5%;
+        margin: 3%;
+        grid-area: joan;
+        background-color: $backgroundColorTerciario;
+        display: grid;
+        grid-template-areas: 
+        "foto nombre nombre nombre nombre nombre estrellas estrellas estrellas estrellas "
+        "texto texto texto texto texto texto texto texto texto texto";
+        .opiniones-joan-foto{
+            grid-area: foto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .opiniones-joan-nombre-pais{
+            grid-area: nombre;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .opiniones-joan-estrellas{
+            grid-area: estrellas;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .opiniones-joan-texto{
+            grid-area: texto;
+            margin: 5%;
+        }
+    }
+    .opiniones-peter{
+        margin-top: 5%;
+        margin: 3%;
+        grid-area: peter;
+        background-color: $backgroundColorTerciario;
+        display: grid;
+        grid-template-areas: 
+        "foto nombre nombre nombre nombre nombre estrellas estrellas estrellas estrellas "
+        "texto texto texto texto texto texto texto texto texto texto";
+        .opiniones-peter-foto{
+            grid-area: foto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .opiniones-peter-nombre-pais{
+            grid-area: nombre;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .opiniones-peter-estrellas{
+            grid-area: estrellas;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .opiniones-peter-texto{
+            grid-area: texto;
+            margin: 5%;
+        }
+    }
+    .opiniones-hugh{
+        margin-top: 5%;
+        margin: 3%;
+        grid-area: hugh;
+        background-color: $backgroundColorTerciario;
+        display: grid;
+        grid-template-areas: 
+        "foto nombre nombre nombre nombre nombre estrellas estrellas estrellas estrellas "
+        "texto texto texto texto texto texto texto texto texto texto";
+        .opiniones-hugh-foto{
+            grid-area: foto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .opiniones-hugh-nombre-pais{
+            grid-area: nombre;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .opiniones-hugh-estrellas{
+            grid-area: estrellas;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .opiniones-hugh-texto{
+            grid-area: texto;
+            margin: 5%;
+        }
+    }
+}
+
+.formulario{
+    height: 633px;
+    margin-top: 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../fotos/fondo-formulario.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-areas: 
+    "imagen formulario";   
+    color: $colorSecundarioTexto;
+    .formulario-imagen{
+        margin: 5%;
+        grid-area: imagen;
+    }
+    .formulario-excel{
+        margin: 5%;
+        grid-area: formulario;
+        .mb-3{
+            margin: 5%;
+            display: flex;
+            justify-content: center;
+            .form-control{
+                width: 50%;
+            }
+        }
+        .boton{
+            display: flex;
+            justify-content: center;
+            button{
+                background-color: $colorRojoTexto;
+                border: none;
+                color: $colorPrimarioTexto;
+            }
+        }
+    }
+}
+
+.pie{
+    padding: 2px;
+    background-color: $backgroundColorSecundario;
+    color: $colorPrimarioTexto;
+    .pie-imagenes{
+        margin: 1%;
+    }
+    p{
+        margin: 1%;
+    }
+    
+}
+
+.texto-general{
+    margin: 1%;
+    color: $colorPrimarioTexto;
+    background-color: $backgroundColorTerciario;
+    p{
+        margin: 2%;
+    }
+}
+
+.biografia-card{
+    display: grid;
+    grid-template-areas: 
+    "texto imagen";
+    .biografia-card-texto{
+        grid-area: texto;
+    }
+    .card{
+        margin: 2%;
+        grid-area: imagen;
+        background-color: $backgroundColorTerciario;
+        border: 1px solid $colorPrimarioTexto;
+        img{
+            max-width: 150px;
+            max-height: 160px;
+        }
+        .card-body{
+            max-width: 150px;
+        }
+    }
+}
+
+.logros-card{
+    display: grid;
+    grid-template-areas: 
+    "imagen texto";
+    .logros-card-texto{
+        grid-area: texto;
+    }
+    .card{
+        margin: 2%;
+        grid-area: imagen;
+        background-color: $backgroundColorTerciario;
+        border: 1px solid $colorPrimarioTexto;
+        img{
+            max-width: 300px;
+            max-height: 310px;
+        }
+        .card-body{
+            max-width: 300px;
+        }
+    }
+}
+
+.reconocimiento-card-casa{
+    display: grid;
+    grid-template-areas: 
+    "texto imagen";
+    .reconocimiento-card-casa-texto{
+        grid-area: texto;
+    }
+    .card{
+        margin: 2%;
+        grid-area: imagen;
+        background-color: $backgroundColorTerciario;
+        border: 1px solid $colorPrimarioTexto;
+        img{
+            max-width: 200px;
+            max-height: 210px;
+        }
+        .card-body{
+            max-width: 200px;
+        }
+    }
+}
+
+.reconocimiento-card-universidad{
+    display: grid;
+    grid-template-areas: 
+    "imagen texto";
+    .reconocimiento-card-universidad-texto{
+        grid-area: texto;
+    }
+    .card{
+        margin: 2%;
+        grid-area: imagen;
+        background-color: $backgroundColorTerciario;
+        border: 1px solid $colorPrimarioTexto;
+        img{
+            max-width: 150px;
+            max-height: 200px;
+        }
+        .card-body{
+            max-width: 150px;
+        }
+    }
+}
+
+.reconocimiento-carrusel{
+    max-height: 633px;
+    margin-top: 2%;
+    background-image: url("../fotos/reconocimiento-fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $colorPrimarioTexto;
+    h2{
+        margin: 2%;
+    }
+    .carousel-item{
+        height: 500px;
+        max-width: 900px;
+        margin-top: 3%;
+        img{
+            max-width: 900px;
+            max-height: 400px;
+        }
+    }
+
+    .carousel-inner{
+        display: flex;
+        justify-content: center;
+    }
+
+    .carousel-control-prev{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .carousel-control-next{
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .carousel-caption{
+        color: $colorPrimarioTexto;
+    }
+
+    .carousel-indicators [data-bs-target] {
+        background-color: $colorPrimarioTexto;
+    }
+}
+
+@media screen and (max-width: 1350px){
+    // .carrusel{
+    //     margin-left: 30%;
+    //     margin-right: 30%;
+    //     .carousel{
+    //         height: 700px;
+    //     }
+    // }
+}
+
+@media screen and (max-width: 1150px){
+    // .carrusel{
+    //     margin-left: 25%;
+    //     margin-right: 25%;
+    //     .carousel{
+    //         height: 700px;
+    //     }
+    // }
+}
+
+@media screen and (max-width: 987px){
+    .video{
+        .video-titulos{
+            margin-left: 5%;
+        }
+        .video-trailer{
+            margin-right: 5%;
+        }
+    }
+
+    .presentacion{
+        .imagen{
+            max-width: 60%;
+        }
+    }
+
+    // .carrusel{
+    //     margin-left: 20%;
+    //     margin-right: 20%;
+    // }
+}
+
+@media screen and (max-width: 768px){
+    .video{
+        .video-titulos{
+            margin-left: 2%;
+        }
+        .video-trailer{
+            margin-right: 2%;
+        }
+    }
+
+    h1{
+        font-size: x-large;
+    }
+
+    h2{
+        font-size: larger;
+    }
+
+    h3{
+        font-size: large;
+    }
+
+    h4{
+        font-size: medium;
+    }
+
+    h5{
+        font-size: small;
+    }
+
+    h6{
+        font-size: small;
+    }
+
+    p{
+        font-size: small;
+    }
+
+    // .carrusel{
+    //     margin-left: 15%;
+    //     margin-right: 15%;
+    //     .d-md-block{
+    //         display: block!important;
+    //     }
+    // }
+
+    .reconocimiento-carrusel{
+        .carousel-item{
+            height: 410px;
+        }
+
+        .carousel-control-next, .carousel-control-prev {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 30%;
+        }
+
+        .d-none {
+            display: block!important;
+        }
+    }
+}
+
+@media screen and (max-width: 570px){
+    header{
+        nav{
+            .nav-imagen{
+                img{
+                    width: 40px;
+                    height: 44px;
+                }
+            }
+        }
+    }
+
+    h1{
+        font-size: larger;
+    }
+
+    h2{
+        font-size: large;
+    }
+
+    h3{
+        font-size: medium;
+    }
+
+    h4{
+        font-size: small;
+    }
+
+    .video{
+        display: flex;
+        flex-direction: column;
+    }
+
+    // .carrusel{
+    //     margin-left: 10%;
+    //     margin-right: 10%;
+    // }
+    
+    .opiniones{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logros-card{
+        display: flex;
+        flex-direction: column;
+        .card{
+            max-width: 300px;
+        }
+    }
+
+    .reconocimiento-carrusel{
+        .carousel-item{
+            height: 350px;
+        }
+    }
+}
+
+@media screen and (max-width: 400px){
+    .biografia-card{
+        display: flex;
+        flex-direction: column;
+        .card{
+            max-width: 150px;
+        }
+    }
+
+    .reconocimiento-card-casa{
+        display: flex;
+        flex-direction: column;
+        .card{
+            max-width: 200px;
+        }
+    }
+
+    .reconocimiento-card-universidad{
+        display: flex;
+        flex-direction: column;
+        .card{
+            max-width: 150px;
+        }
+    }
+
+    .reconocimiento-carrusel{
+        .carousel-item{
+            height: 300px;
+        }
+    }
+}
+
+@media screen and (max-width: 300px){
+    header{
+        a{
+            font-size: medium;
+        }
+        .navbar-brand{
+            font-size: medium;
+        }
+        nav{
+            .nav-imagen{
+                img{
+                    width: 30px;
+                    height: 34px;
+                }
+            }
+        }
+    }
+
+    // .carrusel{
+    //     margin-left: 5%;
+    //     margin-right: 5%;
+    //     // .carousel{
+    //     //     element.style {
+    //     //         height: 10px;
+    //     //     }
+    //     // }
+    // }
+
+    .reconocimiento-carrusel{
+        .carousel-control-next, .carousel-control-prev {
+            margin-top: 45%;
+        }
+    }
+}
