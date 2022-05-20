@@ -1,135 +1,174 @@
 // Variables
 $colorPrimarioTexto: white;
 $colorSecundarioTexto: rgb(241, 159, 122);
-$colorTerciarioTexto: rgb(250,207,48);
+$colorTerciarioTexto: rgb(250, 207, 48);
 $colorRojoTexto: rgb(255, 73, 73);
 $backgroundColor: rgb(190, 36, 36);
 $backgroundColorSecundario: rgb(195, 34, 28);
 $backgroundColorTerciario: rgb(214, 119, 71);
 
-body{
+body {
     background-color: $backgroundColorSecundario;
     font-family: 'Poppins', sans-serif;
 }
 
-header{
+header {
     display: grid;
     grid-template-rows: auto auto;
     text-align: center;
     background-color: $backgroundColorSecundario;
     color: $colorPrimarioTexto;
-    a{
-        font-size: larger;
+
+    .navbar {
+        padding: 0;
+
+        .container {
+            // width: 100%;
+
+            margin-left: 0;
+            padding: 0;
+            background-color: white;
+
+        }
     }
-    .navbar-brand{
+
+    a {
         font-size: larger;
+        display: flex;
+        justify-content: flex-end;
     }
+
+    .navbar-brand {
+        font-size: larger;
+        margin-right: 0;
+    }
+
     .bg-light {
         --bs-bg-opacity: 0;
-        background-color: $backgroundColorSecundario!important;
+        background-color: $backgroundColorSecundario  !important;
     }
+
     .navbar-light .navbar-brand {
         color: $colorPrimarioTexto;
-        &:hover{
+
+        &:hover {
             color: black;
         }
     }
+
     .navbar-light .navbar-nav .nav-link {
         color: $colorPrimarioTexto;
-        &:hover{
+
+        &:hover {
             color: black;
         }
     }
-    .dropdown-menu{
-        background-color: $backgroundColorSecundario;  
+
+    .dropdown-menu {
+        background-color: $backgroundColorSecundario;
         color: $colorPrimarioTexto;
-        &:hover{
+
+        &:hover {
             color: black;
         }
     }
-    .dropdown-item{
+
+    .dropdown-item {
         color: $colorPrimarioTexto;
-        &:hover{
+
+        &:hover {
             color: black;
             background-color: $backgroundColorSecundario;
-            &.active{
+
+            &.active {
                 color: $colorTerciarioTexto;
-                &:hover{
+
+                &:hover {
                     color: black;
                 }
             }
         }
     }
 
-    .dropdown-item.active, .dropdown-item:active {
+    .dropdown-item.active,
+    .dropdown-item:active {
         color: $colorTerciarioTexto;
         text-decoration: none;
         background-color: $backgroundColorSecundario;
     }
 
-    .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+    .navbar-light .navbar-nav .nav-link.active,
+    .navbar-light .navbar-nav .show>.nav-link {
         color: $colorPrimarioTexto;
-        &:hover{
+
+        &:hover {
             color: black;
         }
-        &.active{
+
+        &.active {
             color: $colorTerciarioTexto;
-            &:hover{
+
+            &:hover {
                 color: black;
             }
         }
     }
 
-    .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    .navbar-light .navbar-nav .nav-link:focus,
+    .navbar-light .navbar-nav .nav-link:hover {
         color: $colorPrimarioTexto;
     }
 
-    .navbar-brand{
-        &:focus{
+    .navbar-brand {
+        &:focus {
             color: $colorPrimarioTexto;
         }
     }
 
-    nav{
-        .nav-imagen{
+    nav {
+        .nav-imagen {
             width: 8%;
             margin-left: 1%;
         }
     }
 
-    .navbar-light .navbar-nav .nav-link:hover{
+    .navbar-light .navbar-nav .nav-link:hover {
         color: black;
     }
 }
 
-.presentacion{
+.presentacion {
     display: grid;
-    grid-template-areas: 
-    "imagen-top imagen-top imagen-top"
-    "titulos titulos alan";
+    grid-template-areas:
+        "imagen-top imagen-top imagen-top"
+        "titulos titulos alan";
     background-image: url("../fotos/fondo.jpg");
     height: 400px;
     background-repeat: no-repeat;
     background-size: cover;
     color: $colorPrimarioTexto;
-    .titulos{
+
+    .titulos {
         display: flex;
         flex-direction: column;
         justify-content: center;
         margin-left: 20%;
         margin-right: 18%;
         grid-area: titulos;
-        .guerra{
+
+        .guerra {
             color: $colorRojoTexto;
         }
     }
-    .imagen{
+
+    .imagen {
         // background-image: url("../fotos/fondo3.jpg");
         background-repeat: no-repeat;
         background-size: contain;
         grid-area: alan;
     }
-    .imagen-top{
+
+    .imagen-top {
         // background-image: url("../fotos/fondo2.jpg");
         background-repeat: no-repeat;
         background-size: cover;
@@ -138,7 +177,7 @@ header{
     }
 }
 
-.video{
+.video {
     // display: grid;
     // grid-template-areas: 
     // "titulos trailer";
@@ -147,28 +186,33 @@ header{
     justify-content: center;
     align-items: center;
     color: $colorPrimarioTexto;
-    .video-titulos{
+
+    .video-titulos {
         grid-area: titulos;
         width: 50%;
         display: flex;
         flex-direction: column;
         justify-content: center;
+
         // margin-left: 15%;
-        .futuro{
+        .futuro {
             color: $colorRojoTexto;
         }
-        h5{
+
+        h5 {
             color: $colorPrimarioTexto;
         }
     }
-    .video-trailer{
+
+    .video-trailer {
         height: 250px;
         grid-area: trailer;
         display: flex;
         flex-direction: column;
         justify-content: center;
         margin-right: 15%;
-        iframe{
+
+        iframe {
             max-width: 100%;
             max-height: 100%;
         }
@@ -213,17 +257,18 @@ header{
 //     }
 // }
 
-.carrusel-padre{
+.carrusel-padre {
     margin-top: 5%;
     display: flex;
     justify-content: center;
-    .carrusel{
+
+    .carrusel {
         height: 50%;
         width: 50%;
     }
 }
 
-.conoceme{
+.conoceme {
     // height: 633px;
     // display: flex;
     // flex-direction: column;
@@ -231,26 +276,31 @@ header{
     // align-items: flex-start;
     color: $colorPrimarioTexto;
     margin-top: 3%;
+
     // background-image: url("../fotos/conoceme.jpg");
     // background-repeat: no-repeat;
     // background-size: cover;
-    h1{
+    h1 {
         color: $colorPrimarioTexto;
     }
+
     // .conoceme-titulos-y-texto{
     //     margin-left: 15%;
     // }
-    .conoceme-texto{
+    .conoceme-texto {
         margin-left: 10%;
         margin-right: 10%;
     }
-    .boton{
+
+    .boton {
         display: flex;
         justify-content: center;
-        a{
+
+        a {
             text-decoration: none;
         }
     }
+
     button {
         position: relative;
         display: inline-block;
@@ -263,14 +313,14 @@ header{
         padding: 0;
         font-size: inherit;
         font-family: inherit;
-       }
-       
-       button.learn-more {
+    }
+
+    button.learn-more {
         width: 12rem;
         height: auto;
-       }
-       
-       button.learn-more .circle {
+    }
+
+    button.learn-more .circle {
         transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
         position: relative;
         display: block;
@@ -279,26 +329,26 @@ header{
         height: 3rem;
         background: black;
         border-radius: 1.625rem;
-       }
-       
-       button.learn-more .circle .icon {
+    }
+
+    button.learn-more .circle .icon {
         transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
         position: absolute;
         top: 0;
         bottom: 0;
         margin: auto;
         background: #fff;
-       }
-       
-       button.learn-more .circle .icon.arrow {
+    }
+
+    button.learn-more .circle .icon.arrow {
         transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
         left: 0.625rem;
         width: 1.125rem;
         height: 0.125rem;
         background: none;
-       }
-       
-       button.learn-more .circle .icon.arrow::before {
+    }
+
+    button.learn-more .circle .icon.arrow::before {
         position: absolute;
         content: "";
         top: -0.29rem;
@@ -308,9 +358,9 @@ header{
         border-top: 0.125rem solid #fff;
         border-right: 0.125rem solid #fff;
         transform: rotate(45deg);
-       }
-       
-       button.learn-more .button-text {
+    }
+
+    button.learn-more .button-text {
         transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
         position: absolute;
         top: 0;
@@ -324,31 +374,33 @@ header{
         line-height: 1.6;
         text-align: center;
         text-transform: uppercase;
-       }
-       
-       button:hover .circle {
+    }
+
+    button:hover .circle {
         width: 100%;
-       }
-       
-       button:hover .circle .icon.arrow {
+    }
+
+    button:hover .circle .icon.arrow {
         background: #fff;
         transform: translate(1rem, 0);
-       }
-       
-       button:hover .button-text {
+    }
+
+    button:hover .button-text {
         color: #fff;
-       }
+    }
 }
 
-.nuestros-productos{
+.nuestros-productos {
     margin-top: 3%;
     margin-bottom: 3%;
     color: $colorPrimarioTexto;
-    .fotos-productos{
+
+    .fotos-productos {
         display: flex;
         flex-direction: row;
         justify-content: center;
         margin-top: 2%;
+
         .productos {
             width: 290px;
             height: auto;
@@ -356,127 +408,144 @@ header{
             transition: all 300ms;
             margin-left: 2%;
             margin-right: 2%;
-           }
-           
-           .productos:hover {
+        }
+
+        .productos:hover {
             // opacity: 0.8;
             transform: scale(1.10);
-           }
+        }
     }
 }
 
-.opiniones{
+.opiniones {
     margin-top: 5%;
     display: grid;
-    grid-template-areas: 
-    "titulo titulo titulo"
-    "joan peter hugh";
+    grid-template-areas:
+        "titulo titulo titulo"
+        "joan peter hugh";
     color: $colorPrimarioTexto;
-    .opiniones-titulos{
+
+    .opiniones-titulos {
         grid-area: titulo;
     }
-    h5{
+
+    h5 {
         color: $colorRojoTexto;
     }
-    .opiniones-joan{
+
+    .opiniones-joan {
         margin-top: 5%;
         margin: 3%;
         grid-area: joan;
         background-color: $backgroundColorTerciario;
         display: grid;
-        grid-template-areas: 
-        "foto nombre nombre nombre nombre nombre estrellas estrellas estrellas estrellas "
-        "texto texto texto texto texto texto texto texto texto texto";
-        .opiniones-joan-foto{
+        grid-template-areas:
+            "foto nombre nombre nombre nombre nombre estrellas estrellas estrellas estrellas "
+            "texto texto texto texto texto texto texto texto texto texto";
+
+        .opiniones-joan-foto {
             grid-area: foto;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
-        .opiniones-joan-nombre-pais{
+
+        .opiniones-joan-nombre-pais {
             grid-area: nombre;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
-        .opiniones-joan-estrellas{
+
+        .opiniones-joan-estrellas {
             grid-area: estrellas;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
-        .opiniones-joan-texto{
+
+        .opiniones-joan-texto {
             grid-area: texto;
             margin: 5%;
         }
     }
-    .opiniones-peter{
+
+    .opiniones-peter {
         margin-top: 5%;
         margin: 3%;
         grid-area: peter;
         background-color: $backgroundColorTerciario;
         display: grid;
-        grid-template-areas: 
-        "foto nombre nombre nombre nombre nombre estrellas estrellas estrellas estrellas "
-        "texto texto texto texto texto texto texto texto texto texto";
-        .opiniones-peter-foto{
+        grid-template-areas:
+            "foto nombre nombre nombre nombre nombre estrellas estrellas estrellas estrellas "
+            "texto texto texto texto texto texto texto texto texto texto";
+
+        .opiniones-peter-foto {
             grid-area: foto;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
-        .opiniones-peter-nombre-pais{
+
+        .opiniones-peter-nombre-pais {
             grid-area: nombre;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
-        .opiniones-peter-estrellas{
+
+        .opiniones-peter-estrellas {
             grid-area: estrellas;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
-        .opiniones-peter-texto{
+
+        .opiniones-peter-texto {
             grid-area: texto;
             margin: 5%;
         }
     }
-    .opiniones-hugh{
+
+    .opiniones-hugh {
         margin-top: 5%;
         margin: 3%;
         grid-area: hugh;
         background-color: $backgroundColorTerciario;
         display: grid;
-        grid-template-areas: 
-        "foto nombre nombre nombre nombre nombre estrellas estrellas estrellas estrellas "
-        "texto texto texto texto texto texto texto texto texto texto";
-        .opiniones-hugh-foto{
+        grid-template-areas:
+            "foto nombre nombre nombre nombre nombre estrellas estrellas estrellas estrellas "
+            "texto texto texto texto texto texto texto texto texto texto";
+
+        .opiniones-hugh-foto {
             grid-area: foto;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
-        .opiniones-hugh-nombre-pais{
+
+        .opiniones-hugh-nombre-pais {
             grid-area: nombre;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
-        .opiniones-hugh-estrellas{
+
+        .opiniones-hugh-estrellas {
             grid-area: estrellas;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
-        .opiniones-hugh-texto{
+
+        .opiniones-hugh-texto {
             grid-area: texto;
             margin: 5%;
         }
     }
 }
 
-.formulario{
+.formulario {
     height: 633px;
     margin-top: 8%;
     display: flex;
@@ -486,28 +555,34 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
     display: grid;
-    grid-template-areas: 
-    "imagen formulario";   
+    grid-template-areas:
+        "imagen formulario";
     color: $colorSecundarioTexto;
-    .formulario-imagen{
+
+    .formulario-imagen {
         margin: 5%;
         grid-area: imagen;
     }
-    .formulario-excel{
+
+    .formulario-excel {
         margin: 5%;
         grid-area: formulario;
-        .mb-3{
+
+        .mb-3 {
             margin: 5%;
             display: flex;
             justify-content: center;
-            .form-control{
+
+            .form-control {
                 width: 50%;
             }
         }
-        .boton{
+
+        .boton {
             display: flex;
             justify-content: center;
-            button{
+
+            button {
                 background-color: $colorRojoTexto;
                 border: none;
                 color: $colorPrimarioTexto;
@@ -516,151 +591,196 @@ header{
     }
 }
 
-.pie{
+.pie {
     padding: 2px;
     background-color: $backgroundColorSecundario;
     color: $colorPrimarioTexto;
-    .pie-imagenes{
+
+    .pie-imagenes {
         margin: 1%;
     }
-    p{
+
+    p {
         margin: 1%;
     }
-    
+
 }
 
-.texto-general{
-    margin: 1%;
+.nuestra-empresa {
+    margin-top: 3%;
     color: $colorPrimarioTexto;
-    background-color: $backgroundColorTerciario;
-    p{
+
+    // background-color: $backgroundColorTerciario;
+    p {
         margin: 2%;
+    }
+
+    .biografia-card {
+        display: grid;
+        grid-template-areas:
+            "texto imagen";
+
+        .biografia-card-texto {
+            grid-area: texto;
+        }
+
+        .img-fabrica {
+            margin: 2%;
+            grid-area: imagen;
+
+            // background-color: $backgroundColorTerciario;
+            // border: 1px solid $colorPrimarioTexto;
+            .img-nuestra-historia {
+                max-width: 350px;
+                max-height: 360px;
+                border: 1px solid $colorPrimarioTexto;
+            }
+
+            // .card-body{
+            //     max-width: 150px;
+            // }
+        }
+    }
+
+    .nuestra-fabrica {
+        margin-top: 3%;
+        
+        .nuestra-fabrica-imagen-mapa {
+        display: flex;
+        justify-content: center;
+            img{
+                vertical-align: top;
+            }
+            .img-nuestra-fabrica {
+                margin: 1%;
+                max-width: 600px;
+                max-height: 450px;
+                border: 1px solid $colorPrimarioTexto;
+            }
+            iframe{
+                margin: 1%;
+            }
+        }
     }
 }
 
-.biografia-card{
+.logros-card {
     display: grid;
-    grid-template-areas: 
-    "texto imagen";
-    .biografia-card-texto{
+    grid-template-areas:
+        "imagen texto";
+
+    .logros-card-texto {
         grid-area: texto;
     }
-    .card{
+
+    .card {
         margin: 2%;
         grid-area: imagen;
         background-color: $backgroundColorTerciario;
         border: 1px solid $colorPrimarioTexto;
-        img{
-            max-width: 150px;
-            max-height: 160px;
-        }
-        .card-body{
-            max-width: 150px;
-        }
-    }
-}
 
-.logros-card{
-    display: grid;
-    grid-template-areas: 
-    "imagen texto";
-    .logros-card-texto{
-        grid-area: texto;
-    }
-    .card{
-        margin: 2%;
-        grid-area: imagen;
-        background-color: $backgroundColorTerciario;
-        border: 1px solid $colorPrimarioTexto;
-        img{
+        img {
             max-width: 300px;
             max-height: 310px;
         }
-        .card-body{
+
+        .card-body {
             max-width: 300px;
         }
     }
 }
 
-.reconocimiento-card-casa{
+.reconocimiento-card-casa {
     display: grid;
-    grid-template-areas: 
-    "texto imagen";
-    .reconocimiento-card-casa-texto{
+    grid-template-areas:
+        "texto imagen";
+
+    .reconocimiento-card-casa-texto {
         grid-area: texto;
     }
-    .card{
+
+    .card {
         margin: 2%;
         grid-area: imagen;
         background-color: $backgroundColorTerciario;
         border: 1px solid $colorPrimarioTexto;
-        img{
+
+        img {
             max-width: 200px;
             max-height: 210px;
         }
-        .card-body{
+
+        .card-body {
             max-width: 200px;
         }
     }
 }
 
-.reconocimiento-card-universidad{
+.reconocimiento-card-universidad {
     display: grid;
-    grid-template-areas: 
-    "imagen texto";
-    .reconocimiento-card-universidad-texto{
+    grid-template-areas:
+        "imagen texto";
+
+    .reconocimiento-card-universidad-texto {
         grid-area: texto;
     }
-    .card{
+
+    .card {
         margin: 2%;
         grid-area: imagen;
         background-color: $backgroundColorTerciario;
         border: 1px solid $colorPrimarioTexto;
-        img{
+
+        img {
             max-width: 150px;
             max-height: 200px;
         }
-        .card-body{
+
+        .card-body {
             max-width: 150px;
         }
     }
 }
 
-.reconocimiento-carrusel{
+.reconocimiento-carrusel {
     max-height: 633px;
     margin-top: 2%;
     background-image: url("../fotos/reconocimiento-fondo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     color: $colorPrimarioTexto;
-    h2{
+
+    h2 {
         margin: 2%;
     }
-    .carousel-item{
+
+    .carousel-item {
         height: 500px;
         max-width: 900px;
         margin-top: 3%;
-        img{
+
+        img {
             max-width: 900px;
             max-height: 400px;
         }
     }
 
-    .carousel-inner{
+    .carousel-inner {
         display: flex;
         justify-content: center;
     }
 
-    .carousel-control-prev{
+    .carousel-control-prev {
         display: flex;
         justify-content: flex-end;
     }
-    .carousel-control-next{
+
+    .carousel-control-next {
         display: flex;
         justify-content: flex-start;
     }
 
-    .carousel-caption{
+    .carousel-caption {
         color: $colorPrimarioTexto;
     }
 
@@ -669,7 +789,7 @@ header{
     }
 }
 
-@media screen and (max-width: 1350px){
+@media screen and (max-width: 1350px) {
     // .carrusel{
     //     margin-left: 30%;
     //     margin-right: 30%;
@@ -679,7 +799,7 @@ header{
     // }
 }
 
-@media screen and (max-width: 1150px){
+@media screen and (max-width: 1150px) {
     // .carrusel{
     //     margin-left: 25%;
     //     margin-right: 25%;
@@ -689,18 +809,23 @@ header{
     // }
 }
 
-@media screen and (max-width: 987px){
-    .video{
-        .video-titulos{
+@media screen and (max-width: 987px) {
+    .nuestra-fabrica-imagen-mapa{
+        display: flex;
+        flex-direction: column;
+    }
+    .video {
+        .video-titulos {
             margin-left: 5%;
         }
-        .video-trailer{
+
+        .video-trailer {
             margin-right: 5%;
         }
     }
 
-    .presentacion{
-        .imagen{
+    .presentacion {
+        .imagen {
             max-width: 60%;
         }
     }
@@ -711,41 +836,42 @@ header{
     // }
 }
 
-@media screen and (max-width: 768px){
-    .video{
-        .video-titulos{
+@media screen and (max-width: 768px) {
+    .video {
+        .video-titulos {
             margin-left: 2%;
         }
-        .video-trailer{
+
+        .video-trailer {
             margin-right: 2%;
         }
     }
 
-    h1{
+    h1 {
         font-size: x-large;
     }
 
-    h2{
+    h2 {
         font-size: larger;
     }
 
-    h3{
+    h3 {
         font-size: large;
     }
 
-    h4{
+    h4 {
         font-size: medium;
     }
 
-    h5{
+    h5 {
         font-size: small;
     }
 
-    h6{
+    h6 {
         font-size: small;
     }
 
-    p{
+    p {
         font-size: small;
     }
 
@@ -757,28 +883,29 @@ header{
     //     }
     // }
 
-    .reconocimiento-carrusel{
-        .carousel-item{
+    .reconocimiento-carrusel {
+        .carousel-item {
             height: 410px;
         }
 
-        .carousel-control-next, .carousel-control-prev {
+        .carousel-control-next,
+        .carousel-control-prev {
             display: flex;
             align-items: flex-start;
             margin-top: 30%;
         }
 
         .d-none {
-            display: block!important;
+            display: block !important;
         }
     }
 }
 
-@media screen and (max-width: 570px){
-    header{
-        nav{
-            .nav-imagen{
-                img{
+@media screen and (max-width: 570px) {
+    header {
+        nav {
+            .nav-imagen {
+                img {
                     width: 40px;
                     height: 44px;
                 }
@@ -786,23 +913,23 @@ header{
         }
     }
 
-    h1{
+    h1 {
         font-size: larger;
     }
 
-    h2{
+    h2 {
         font-size: large;
     }
 
-    h3{
+    h3 {
         font-size: medium;
     }
 
-    h4{
+    h4 {
         font-size: small;
     }
 
-    .video{
+    .video {
         display: flex;
         flex-direction: column;
     }
@@ -811,70 +938,78 @@ header{
     //     margin-left: 10%;
     //     margin-right: 10%;
     // }
-    
-    .opiniones{
+
+    .opiniones {
         display: flex;
         flex-direction: column;
     }
 
-    .logros-card{
+    .logros-card {
         display: flex;
         flex-direction: column;
-        .card{
+
+        .card {
             max-width: 300px;
         }
     }
 
-    .reconocimiento-carrusel{
-        .carousel-item{
+    .reconocimiento-carrusel {
+        .carousel-item {
             height: 350px;
         }
     }
 }
 
-@media screen and (max-width: 400px){
-    .biografia-card{
-        display: flex;
-        flex-direction: column;
-        .card{
-            max-width: 150px;
+@media screen and (max-width: 450px) {
+    .nuestra-empresa {
+        .biografia-card {
+            display: flex;
+            flex-direction: column;
+
+            .img-fabrica {
+                max-width: 150px;
+            }
         }
     }
 
-    .reconocimiento-card-casa{
+    .reconocimiento-card-casa {
         display: flex;
         flex-direction: column;
-        .card{
+
+        .card {
             max-width: 200px;
         }
     }
 
-    .reconocimiento-card-universidad{
+    .reconocimiento-card-universidad {
         display: flex;
         flex-direction: column;
-        .card{
+
+        .card {
             max-width: 150px;
         }
     }
 
-    .reconocimiento-carrusel{
-        .carousel-item{
+    .reconocimiento-carrusel {
+        .carousel-item {
             height: 300px;
         }
     }
 }
 
-@media screen and (max-width: 300px){
-    header{
-        a{
+@media screen and (max-width: 300px) {
+    header {
+        a {
             font-size: medium;
         }
-        .navbar-brand{
+
+        .navbar-brand {
             font-size: medium;
         }
-        nav{
-            .nav-imagen{
-                img{
+
+        nav {
+            .nav-imagen {
+                img {
                     width: 30px;
                     height: 34px;
                 }
@@ -892,8 +1027,10 @@ header{
     //     // }
     // }
 
-    .reconocimiento-carrusel{
-        .carousel-control-next, .carousel-control-prev {
+    .reconocimiento-carrusel {
+
+        .carousel-control-next,
+        .carousel-control-prev {
             margin-top: 45%;
         }
     }

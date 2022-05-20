@@ -8,10 +8,19 @@ header {
   text-align: center;
   background-color: #c3221c;
   color: white; }
+  header .navbar {
+    padding: 0; }
+    header .navbar .container {
+      margin-left: 0;
+      padding: 0;
+      background-color: white; }
   header a {
-    font-size: larger; }
+    font-size: larger;
+    display: flex;
+    justify-content: flex-end; }
   header .navbar-brand {
-    font-size: larger; }
+    font-size: larger;
+    margin-right: 0; }
   header .bg-light {
     --bs-bg-opacity: 0;
     background-color: #c3221c !important; }
@@ -37,19 +46,25 @@ header {
         color: #facf30; }
         header .dropdown-item:hover.active:hover {
           color: black; }
-  header .dropdown-item.active, header .dropdown-item:active {
+  header .dropdown-item.active,
+  header .dropdown-item:active {
     color: #facf30;
     text-decoration: none;
     background-color: #c3221c; }
-  header .navbar-light .navbar-nav .nav-link.active, header .navbar-light .navbar-nav .show > .nav-link {
+  header .navbar-light .navbar-nav .nav-link.active,
+  header .navbar-light .navbar-nav .show > .nav-link {
     color: white; }
-    header .navbar-light .navbar-nav .nav-link.active:hover, header .navbar-light .navbar-nav .show > .nav-link:hover {
+    header .navbar-light .navbar-nav .nav-link.active:hover,
+    header .navbar-light .navbar-nav .show > .nav-link:hover {
       color: black; }
-    header .navbar-light .navbar-nav .nav-link.active.active, header .navbar-light .navbar-nav .show > .nav-link.active {
+    header .navbar-light .navbar-nav .nav-link.active.active,
+    header .navbar-light .navbar-nav .show > .nav-link.active {
       color: #facf30; }
-      header .navbar-light .navbar-nav .nav-link.active.active:hover, header .navbar-light .navbar-nav .show > .nav-link.active:hover {
+      header .navbar-light .navbar-nav .nav-link.active.active:hover,
+      header .navbar-light .navbar-nav .show > .nav-link.active:hover {
         color: black; }
-  header .navbar-light .navbar-nav .nav-link:focus, header .navbar-light .navbar-nav .nav-link:hover {
+  header .navbar-light .navbar-nav .nav-link:focus,
+  header .navbar-light .navbar-nav .nav-link:hover {
     color: white; }
   header .navbar-brand:focus {
     color: white; }
@@ -348,28 +363,37 @@ header {
   .pie p {
     margin: 1%; }
 
-.texto-general {
-  margin: 1%;
-  color: white;
-  background-color: #d67747; }
-  .texto-general p {
+.nuestra-empresa {
+  margin-top: 3%;
+  color: white; }
+  .nuestra-empresa p {
     margin: 2%; }
-
-.biografia-card {
-  display: grid;
-  grid-template-areas: "texto imagen"; }
-  .biografia-card .biografia-card-texto {
-    grid-area: texto; }
-  .biografia-card .card {
-    margin: 2%;
-    grid-area: imagen;
-    background-color: #d67747;
-    border: 1px solid white; }
-    .biografia-card .card img {
-      max-width: 150px;
-      max-height: 160px; }
-    .biografia-card .card .card-body {
-      max-width: 150px; }
+  .nuestra-empresa .biografia-card {
+    display: grid;
+    grid-template-areas: "texto imagen"; }
+    .nuestra-empresa .biografia-card .biografia-card-texto {
+      grid-area: texto; }
+    .nuestra-empresa .biografia-card .img-fabrica {
+      margin: 2%;
+      grid-area: imagen; }
+      .nuestra-empresa .biografia-card .img-fabrica .img-nuestra-historia {
+        max-width: 350px;
+        max-height: 360px;
+        border: 1px solid white; }
+  .nuestra-empresa .nuestra-fabrica {
+    margin-top: 3%; }
+    .nuestra-empresa .nuestra-fabrica .nuestra-fabrica-imagen-mapa {
+      display: flex;
+      justify-content: center; }
+      .nuestra-empresa .nuestra-fabrica .nuestra-fabrica-imagen-mapa img {
+        vertical-align: top; }
+      .nuestra-empresa .nuestra-fabrica .nuestra-fabrica-imagen-mapa .img-nuestra-fabrica {
+        margin: 1%;
+        max-width: 600px;
+        max-height: 450px;
+        border: 1px solid white; }
+      .nuestra-empresa .nuestra-fabrica .nuestra-fabrica-imagen-mapa iframe {
+        margin: 1%; }
 
 .logros-card {
   display: grid;
@@ -450,6 +474,9 @@ header {
     background-color: white; }
 
 @media screen and (max-width: 987px) {
+  .nuestra-fabrica-imagen-mapa {
+    display: flex;
+    flex-direction: column; }
   .video .video-titulos {
     margin-left: 5%; }
   .video .video-trailer {
@@ -478,7 +505,8 @@ header {
     font-size: small; }
   .reconocimiento-carrusel .carousel-item {
     height: 410px; }
-  .reconocimiento-carrusel .carousel-control-next, .reconocimiento-carrusel .carousel-control-prev {
+  .reconocimiento-carrusel .carousel-control-next,
+  .reconocimiento-carrusel .carousel-control-prev {
     display: flex;
     align-items: flex-start;
     margin-top: 30%; }
@@ -511,11 +539,11 @@ header {
   .reconocimiento-carrusel .carousel-item {
     height: 350px; } }
 
-@media screen and (max-width: 400px) {
-  .biografia-card {
+@media screen and (max-width: 450px) {
+  .nuestra-empresa .biografia-card {
     display: flex;
     flex-direction: column; }
-    .biografia-card .card {
+    .nuestra-empresa .biografia-card .img-fabrica {
       max-width: 150px; }
   .reconocimiento-card-casa {
     display: flex;
@@ -538,5 +566,6 @@ header {
   header nav .nav-imagen img {
     width: 30px;
     height: 34px; }
-  .reconocimiento-carrusel .carousel-control-next, .reconocimiento-carrusel .carousel-control-prev {
+  .reconocimiento-carrusel .carousel-control-next,
+  .reconocimiento-carrusel .carousel-control-prev {
     margin-top: 45%; } }
