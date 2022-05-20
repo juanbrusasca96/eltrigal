@@ -644,20 +644,23 @@ header {
 
     .nuestra-fabrica {
         margin-top: 3%;
-        
+
         .nuestra-fabrica-imagen-mapa {
-        display: flex;
-        justify-content: center;
-            img{
+            display: flex;
+            justify-content: center;
+
+            img {
                 vertical-align: top;
             }
+
             .img-nuestra-fabrica {
                 margin: 1%;
                 max-width: 600px;
                 max-height: 450px;
                 border: 1px solid $colorPrimarioTexto;
             }
-            iframe{
+
+            iframe {
                 margin: 1%;
             }
         }
@@ -810,10 +813,11 @@ header {
 }
 
 @media screen and (max-width: 987px) {
-    .nuestra-fabrica-imagen-mapa{
+    .nuestra-fabrica-imagen-mapa {
         display: flex;
         flex-direction: column;
     }
+
     .video {
         .video-titulos {
             margin-left: 5%;

@@ -18,12 +18,19 @@
 </head>
 
 <body>
-    <!-- <embed src="Avicii - Waiting For Love (Lyric Video).mp3" autostarty="true" loop="true" type=""> -->
+    <audio autoplay id="myaudio">
+        <source src="sandro-trigal.mp3">
+    </audio>
+
+    <script>
+        var audio = document.getElementById("myaudio");
+        audio.volume = 0.2;
+    </script>
     <header class="fw-bold">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container nav-imagen">
                 <a class="navbar-brand" href="#">
-                    <img class="img-fluid img-navbar" src="../eltrigal/fotos/logoElTrigal.jpg" alt="" width="108" >
+                    <img class="img-fluid img-navbar" src="../eltrigal/fotos/logoElTrigal.jpg" alt="" width="108">
                 </a>
             </div>
             <div class="menu container-fluid">
@@ -222,15 +229,18 @@
                 <div class="productos">
                     <a href="index.html">
                         <img class="img-fluid" src="../eltrigal/fotos/fideos.jpg" alt="" width="290">
-                    </a></div>
+                    </a>
+                </div>
                 <div class="productos">
                     <a href="index.html">
                         <img class="img-fluid" src="../eltrigal/fotos/empanadas.jpg" alt="" width="290">
-                    </a></div>
+                    </a>
+                </div>
                 <div class="productos">
                     <a href="index.html">
                         <img class="img-fluid" src="../eltrigal/fotos/pastelitos.jpg" alt="" width="290">
-                    </a></div>
+                    </a>
+                </div>
             </div>
         </div>
         <!-- <div class="opiniones container-fluid">
