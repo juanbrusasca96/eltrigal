@@ -1,6 +1,7 @@
 body {
   background-color: #c3221c;
-  font-family: 'Poppins', sans-serif; }
+  font-family: 'Poppins', sans-serif;
+  color: white; }
 
 header {
   display: grid;
@@ -9,7 +10,8 @@ header {
   background-color: #c3221c;
   color: white; }
   header .navbar {
-    padding: 0; }
+    padding: 0;
+    border: 1px solid white; }
     header .navbar .container {
       margin-left: 0;
       padding: 0;
@@ -73,6 +75,16 @@ header {
     margin-left: 1%; }
   header .navbar-light .navbar-nav .nav-link:hover {
     color: black; }
+
+.productos-presentacion {
+  background-image: url("../fotos/productos-fondo.jpg");
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 .presentacion {
   display: grid;
@@ -323,36 +335,97 @@ header {
       margin: 5%; }
 
 .formulario {
-  height: 633px;
-  margin-top: 8%;
+  height: 680px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding-right: 0;
   background-image: url("../fotos/fondo-formulario.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   display: grid;
-  grid-template-areas: "imagen formulario";
-  color: #f19f7a; }
-  .formulario .formulario-imagen {
-    margin: 5%;
-    grid-area: imagen; }
+  grid-template-areas: "formulario redes";
+  color: #facf30; }
+  .formulario .formulario-redes {
+    grid-area: redes;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .formulario .formulario-redes h2 {
+      margin: 2%;
+      color: white; }
+    .formulario .formulario-redes .btn-primary {
+      border: none; }
+    .formulario .formulario-redes .btn {
+      font-size: 150%;
+      width: 50px;
+      margin: 2%; }
+    .formulario .formulario-redes .redes a {
+      text-decoration: none;
+      color: white;
+      font-size: 150%; }
+    .formulario .formulario-redes .location:hover {
+      background-color: #0d6efd; }
+    .formulario .formulario-redes .wp {
+      display: flex;
+      flex-direction: row; }
+      .formulario .formulario-redes .wp p {
+        text-decoration: none;
+        color: white;
+        font-size: 150%;
+        display: flex;
+        align-items: flex-end; }
   .formulario .formulario-excel {
-    margin: 5%;
+    margin: 2%;
+    margin-left: 4%;
     grid-area: formulario; }
-    .formulario .formulario-excel .mb-3 {
-      margin: 5%;
-      display: flex;
-      justify-content: center; }
-      .formulario .formulario-excel .mb-3 .form-control {
-        width: 50%; }
+    .formulario .formulario-excel .mb-3 .form-control {
+      width: 90%; }
     .formulario .formulario-excel .boton {
-      display: flex;
-      justify-content: center; }
+      /* From uiverse.io by @adamgiebl */ }
       .formulario .formulario-excel .boton button {
-        background-color: #ff4949;
+        font-family: inherit;
+        font-size: 18px;
+        background: #c3221c;
+        color: white;
+        padding: 0.7em 1em;
+        padding-left: 0.9em;
+        display: flex;
+        align-items: center;
         border: none;
-        color: white; }
+        border-radius: 16px;
+        overflow: hidden;
+        transition: all 0.2s; }
+      .formulario .formulario-excel .boton button span {
+        display: block;
+        margin-left: 0.3em;
+        transition: all 0.3s ease-in-out; }
+      .formulario .formulario-excel .boton button svg {
+        display: block;
+        transform-origin: center center;
+        transition: transform 0.3s ease-in-out; }
+      .formulario .formulario-excel .boton button:hover .svg-wrapper {
+        animation: fly-1 0.6s ease-in-out infinite alternate; }
+      .formulario .formulario-excel .boton button:hover svg {
+        transform: translateX(1.2em) rotate(45deg) scale(1.1); }
+      .formulario .formulario-excel .boton button:hover span {
+        transform: translateX(5em); }
+      .formulario .formulario-excel .boton button:active {
+        transform: scale(0.95); }
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em); }
+  to {
+    transform: translateY(-0.1em); } }
+
+.section-gracias {
+  margin-top: 10%; }
+  .section-gracias .gracias {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .section-gracias .gracias a {
+      color: #facf30;
+      font-size: xx-large; }
 
 .pie {
   padding: 2px;
@@ -370,18 +443,19 @@ header {
     margin: 2%; }
   .nuestra-empresa .biografia-card {
     display: grid;
-    grid-template-areas: "texto imagen"; }
+    grid-template-areas: "texto imagen";
+    margin: 2%; }
     .nuestra-empresa .biografia-card .biografia-card-texto {
+      margin-right: 2%;
       grid-area: texto; }
     .nuestra-empresa .biografia-card .img-fabrica {
-      margin: 2%;
       grid-area: imagen; }
       .nuestra-empresa .biografia-card .img-fabrica .img-nuestra-historia {
         max-width: 350px;
         max-height: 360px;
         border: 1px solid white; }
   .nuestra-empresa .nuestra-fabrica {
-    margin-top: 3%; }
+    margin: 2%; }
     .nuestra-empresa .nuestra-fabrica .nuestra-fabrica-imagen-mapa {
       display: flex;
       justify-content: center; }
@@ -394,6 +468,54 @@ header {
         border: 1px solid white; }
       .nuestra-empresa .nuestra-fabrica .nuestra-fabrica-imagen-mapa iframe {
         margin: 1%; }
+
+.titulos-productos {
+  margin: 3%; }
+
+.productos-imagenes {
+  margin: 3%;
+  display: grid;
+  grid-template-areas: "auto auto auto auto"; }
+  .productos-imagenes .card {
+    max-width: 290px;
+    max-height: 374px;
+    background: #facf30;
+    padding: .4em;
+    border-radius: 6px;
+    margin: 2%; }
+  .productos-imagenes .card-image {
+    background-color: #ececec;
+    width: 100%;
+    height: 83%;
+    border-radius: 6px 6px 0 0; }
+    .productos-imagenes .card-image img {
+      width: 100%;
+      height: 100%; }
+  .productos-imagenes .card-image:hover {
+    transform: scale(0.95); }
+  .productos-imagenes .category {
+    text-transform: uppercase;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #c3221c;
+    padding: 10px 7px 0; }
+  .productos-imagenes .category:hover {
+    cursor: pointer; }
+  .productos-imagenes .heading {
+    font-weight: 600;
+    color: #585757;
+    padding: 7px; }
+  .productos-imagenes .heading:hover {
+    cursor: pointer; }
+  .productos-imagenes .author {
+    color: gray;
+    font-weight: 400;
+    font-size: 11px;
+    padding-top: 20px; }
+  .productos-imagenes .name {
+    font-weight: 600; }
+  .productos-imagenes .name:hover {
+    cursor: pointer; }
 
 .logros-card {
   display: grid;
@@ -484,6 +606,16 @@ header {
   .presentacion .imagen {
     max-width: 60%; } }
 
+@media screen and (max-width: 840px) {
+  nav .nav-imagen {
+    width: 67px;
+    height: 67px;
+    min-width: 67px;
+    margin-left: 1%;
+    margin-bottom: 1%; }
+  .productos-imagenes {
+    grid-template-areas: "auto auto auto"; } }
+
 @media screen and (max-width: 768px) {
   .video .video-titulos {
     margin-left: 2%; }
@@ -511,12 +643,19 @@ header {
     align-items: flex-start;
     margin-top: 30%; }
   .reconocimiento-carrusel .d-none {
-    display: block !important; } }
+    display: block !important; }
+  .formulario .formulario-redes .btn {
+    font-size: 100%; }
+  .formulario .formulario-redes .redes a {
+    font-size: 100%; }
+  .formulario .formulario-redes .wp p {
+    font-size: 100%; } }
+
+@media screen and (max-width: 640px) {
+  .productos-imagenes {
+    grid-template-areas: "auto auto"; } }
 
 @media screen and (max-width: 570px) {
-  header nav .nav-imagen img {
-    width: 40px;
-    height: 44px; }
   h1 {
     font-size: larger; }
   h2 {
@@ -540,6 +679,8 @@ header {
     height: 350px; } }
 
 @media screen and (max-width: 450px) {
+  nav .nav-imagen {
+    margin-bottom: 2%; }
   .nuestra-empresa .biografia-card {
     display: flex;
     flex-direction: column; }
@@ -556,16 +697,21 @@ header {
     .reconocimiento-card-universidad .card {
       max-width: 150px; }
   .reconocimiento-carrusel .carousel-item {
-    height: 300px; } }
+    height: 300px; }
+  .formulario .formulario-redes .btn-primary {
+    height: 31px; }
+  .formulario .formulario-redes .btn {
+    font-size: 80%; }
+  .formulario .formulario-redes .redes a {
+    font-size: 80%; }
+  .formulario .formulario-redes .wp p {
+    font-size: 80%; } }
 
 @media screen and (max-width: 300px) {
   header a {
     font-size: medium; }
   header .navbar-brand {
     font-size: medium; }
-  header nav .nav-imagen img {
-    width: 30px;
-    height: 34px; }
   .reconocimiento-carrusel .carousel-control-next,
   .reconocimiento-carrusel .carousel-control-prev {
     margin-top: 45%; } }

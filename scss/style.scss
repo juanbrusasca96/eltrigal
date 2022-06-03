@@ -3,13 +3,14 @@ $colorPrimarioTexto: white;
 $colorSecundarioTexto: rgb(241, 159, 122);
 $colorTerciarioTexto: rgb(250, 207, 48);
 $colorRojoTexto: rgb(255, 73, 73);
-$backgroundColor: rgb(190, 36, 36);
+// $backgroundColor: rgb(190, 36, 36);
 $backgroundColorSecundario: rgb(195, 34, 28);
 $backgroundColorTerciario: rgb(214, 119, 71);
 
 body {
     background-color: $backgroundColorSecundario;
     font-family: 'Poppins', sans-serif;
+    color: $colorPrimarioTexto;
 }
 
 header {
@@ -21,6 +22,7 @@ header {
 
     .navbar {
         padding: 0;
+        border: 1px solid $colorPrimarioTexto;
 
         .container {
             // width: 100%;
@@ -135,6 +137,17 @@ header {
     .navbar-light .navbar-nav .nav-link:hover {
         color: black;
     }
+}
+
+.productos-presentacion {
+    background-image: url("../fotos/productos-fondo.jpg");
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $colorPrimarioTexto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .presentacion {
@@ -546,47 +559,167 @@ header {
 }
 
 .formulario {
-    height: 633px;
-    margin-top: 8%;
+    height: 680px;
+    // margin-top: 8%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    // flex-direction: column;
+    // align-items: center;
+    padding-right: 0;
     background-image: url("../fotos/fondo-formulario.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     display: grid;
     grid-template-areas:
-        "imagen formulario";
-    color: $colorSecundarioTexto;
+        "formulario redes";
+    color: $colorTerciarioTexto;
 
-    .formulario-imagen {
-        margin: 5%;
-        grid-area: imagen;
+    .formulario-redes {
+        // margin: 5%;
+        grid-area: redes;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h2 {
+            margin: 2%;
+            color: $colorPrimarioTexto;
+        }
+
+        .btn-primary {
+            border: none;
+        }
+
+        .btn {
+            font-size: 150%;
+            width: 50px;
+            margin: 2%;
+        }
+
+        .redes {
+
+            // display: flex;
+            // flex-direction: row;
+            a {
+                text-decoration: none;
+                color: $colorPrimarioTexto;
+                font-size: 150%;
+            }
+        }
+
+        .location {
+            &:hover {
+                background-color: #0d6efd;
+            }
+        }
+
+        .wp {
+            display: flex;
+            flex-direction: row;
+
+            p {
+                text-decoration: none;
+                color: $colorPrimarioTexto;
+                font-size: 150%;
+                display: flex;
+                align-items: flex-end;
+            }
+        }
     }
 
     .formulario-excel {
-        margin: 5%;
+        margin: 2%;
+        margin-left: 4%;
         grid-area: formulario;
 
         .mb-3 {
-            margin: 5%;
-            display: flex;
-            justify-content: center;
+            // margin: 5%;
+            // display: flex;
+            // justify-content: center;
 
             .form-control {
-                width: 50%;
+                width: 90%;
             }
         }
 
         .boton {
-            display: flex;
-            justify-content: center;
+            // display: flex;
+            // justify-content: center;
 
+            // button {
+            //     background-color: $backgroundColorSecundario;
+            //     border: none;
+            //     color: $colorPrimarioTexto;
+            // }
+
+            /* From uiverse.io by @adamgiebl */
             button {
-                background-color: $colorRojoTexto;
+                font-family: inherit;
+                font-size: 18px;
+                background: $backgroundColorSecundario;
+                color: white;
+                padding: 0.7em 1em;
+                padding-left: 0.9em;
+                display: flex;
+                align-items: center;
                 border: none;
-                color: $colorPrimarioTexto;
+                border-radius: 16px;
+                overflow: hidden;
+                transition: all 0.2s;
             }
+
+            button span {
+                display: block;
+                margin-left: 0.3em;
+                transition: all 0.3s ease-in-out;
+            }
+
+            button svg {
+                display: block;
+                transform-origin: center center;
+                transition: transform 0.3s ease-in-out;
+            }
+
+            button:hover .svg-wrapper {
+                animation: fly-1 0.6s ease-in-out infinite alternate;
+            }
+
+            button:hover svg {
+                transform: translateX(1.2em) rotate(45deg) scale(1.1);
+            }
+
+            button:hover span {
+                transform: translateX(5em);
+            }
+
+            button:active {
+                transform: scale(0.95);
+            }
+
+            @keyframes fly-1 {
+                from {
+                    transform: translateY(0.1em);
+                }
+
+                to {
+                    transform: translateY(-0.1em);
+                }
+            }
+
+
+        }
+    }
+}
+
+.section-gracias {
+    margin-top: 10%;
+    .gracias {
+        // margin-top: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a{
+            color: $colorTerciarioTexto;
+            font-size: xx-large;
         }
     }
 }
@@ -619,13 +752,14 @@ header {
         display: grid;
         grid-template-areas:
             "texto imagen";
+        margin: 2%;
 
         .biografia-card-texto {
+            margin-right: 2%;
             grid-area: texto;
         }
 
         .img-fabrica {
-            margin: 2%;
             grid-area: imagen;
 
             // background-color: $backgroundColorTerciario;
@@ -643,7 +777,7 @@ header {
     }
 
     .nuestra-fabrica {
-        margin-top: 3%;
+        margin: 2%;
 
         .nuestra-fabrica-imagen-mapa {
             display: flex;
@@ -664,6 +798,78 @@ header {
                 margin: 1%;
             }
         }
+    }
+}
+
+.titulos-productos {
+    margin: 3%;
+}
+
+.productos-imagenes {
+    margin: 3%;
+    display: grid;
+    grid-template-areas: "auto auto auto auto";
+
+    .card {
+        max-width: 290px;
+        max-height: 374px;
+        background: $colorTerciarioTexto;
+        padding: .4em;
+        border-radius: 6px;
+        margin: 2%;
+    }
+
+    .card-image {
+        background-color: rgb(236, 236, 236);
+        width: 100%;
+        height: 83%;
+        border-radius: 6px 6px 0 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .card-image:hover {
+        transform: scale(0.95);
+    }
+
+    .category {
+        text-transform: uppercase;
+        font-size: 1.1em;
+        font-weight: 600;
+        color: $backgroundColorSecundario;
+        padding: 10px 7px 0;
+    }
+
+    .category:hover {
+        cursor: pointer;
+    }
+
+    .heading {
+        font-weight: 600;
+        color: rgb(88, 87, 87);
+        padding: 7px;
+    }
+
+    .heading:hover {
+        cursor: pointer;
+    }
+
+    .author {
+        color: gray;
+        font-weight: 400;
+        font-size: 11px;
+        padding-top: 20px;
+    }
+
+    .name {
+        font-weight: 600;
+    }
+
+    .name:hover {
+        cursor: pointer;
     }
 }
 
@@ -840,6 +1046,22 @@ header {
     // }
 }
 
+@media screen and (max-width: 840px) {
+    nav {
+        .nav-imagen {
+            width: 67px;
+            height: 67px;
+            min-width: 67px;
+            margin-left: 1%;
+            margin-bottom: 1%;
+        }
+    }
+
+    .productos-imagenes {
+        grid-template-areas: "auto auto auto";
+    }
+}
+
 @media screen and (max-width: 768px) {
     .video {
         .video-titulos {
@@ -903,19 +1125,45 @@ header {
             display: block !important;
         }
     }
-}
 
-@media screen and (max-width: 570px) {
-    header {
-        nav {
-            .nav-imagen {
-                img {
-                    width: 40px;
-                    height: 44px;
+    .formulario {
+        .formulario-redes {
+            .btn {
+                font-size: 100%;
+            }
+
+            .redes {
+                a {
+                    font-size: 100%;
+                }
+            }
+
+            .wp {
+                p {
+                    font-size: 100%;
                 }
             }
         }
     }
+}
+
+@media screen and (max-width: 640px) {
+    .productos-imagenes {
+        grid-template-areas: "auto auto";
+    }
+}
+
+@media screen and (max-width: 570px) {
+    // header {
+    //     nav {
+    //         .nav-imagen {
+    //             img {
+    //                 width: 40px;
+    //                 height: 44px;
+    //             }
+    //         }
+    //     }
+    // }
 
     h1 {
         font-size: larger;
@@ -965,6 +1213,12 @@ header {
 }
 
 @media screen and (max-width: 450px) {
+    nav {
+        .nav-imagen {
+            margin-bottom: 2%;
+        }
+    }
+
     .nuestra-empresa {
         .biografia-card {
             display: flex;
@@ -999,6 +1253,30 @@ header {
             height: 300px;
         }
     }
+
+    .formulario {
+        .formulario-redes {
+            .btn-primary{
+                height: 31px;
+            }
+
+            .btn {
+                font-size: 80%;
+            }
+
+            .redes {
+                a {
+                    font-size: 80%;
+                }
+            }
+
+            .wp {
+                p {
+                    font-size: 80%;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 300px) {
@@ -1011,14 +1289,14 @@ header {
             font-size: medium;
         }
 
-        nav {
-            .nav-imagen {
-                img {
-                    width: 30px;
-                    height: 34px;
-                }
-            }
-        }
+        // nav {
+        //     .nav-imagen {
+        //         img {
+        //             width: 34px;
+        //             height: 34px;
+        //         }
+        //     }
+        // }
     }
 
     // .carrusel{
