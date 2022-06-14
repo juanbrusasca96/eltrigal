@@ -1,22 +1,22 @@
 // Variables
-$colorPrimarioTexto: white;
+$colorPrimarioTexto: rgb(195, 34, 28);
 $colorSecundarioTexto: rgb(241, 159, 122);
 $colorTerciarioTexto: rgb(250, 207, 48);
 $colorRojoTexto: rgb(255, 73, 73);
 // $backgroundColor: rgb(190, 36, 36);
-$backgroundColorSecundario: rgb(195, 34, 28);
+$backgroundColorSecundario: white;
 $backgroundColorTerciario: rgb(214, 119, 71);
 
 body {
     background-color: $backgroundColorSecundario;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Libre Baskerville', serif;
     color: $colorPrimarioTexto;
 }
 
 header {
     display: grid;
     grid-template-rows: auto auto;
-    text-align: center;
+    // text-align: center;
     background-color: $backgroundColorSecundario;
     color: $colorPrimarioTexto;
 
@@ -32,12 +32,28 @@ header {
             background-color: white;
 
         }
+
+        .container-fluid{
+            padding-top: 35px;
+        }
+    }
+
+    li{
+        margin-left: 25px;
     }
 
     a {
-        font-size: larger;
+        font-size: x-large;
         display: flex;
         justify-content: flex-end;
+    }
+
+    .menu{
+        padding: 0;
+    }
+
+    .navbar-toggler{
+        margin-bottom: 5px;
     }
 
     .navbar-brand {
@@ -54,7 +70,7 @@ header {
         color: $colorPrimarioTexto;
 
         &:hover {
-            color: black;
+            color: $colorTerciarioTexto;
         }
     }
 
@@ -62,7 +78,7 @@ header {
         color: $colorPrimarioTexto;
 
         &:hover {
-            color: black;
+            color: $colorTerciarioTexto;
         }
     }
 
@@ -71,7 +87,7 @@ header {
         color: $colorPrimarioTexto;
 
         &:hover {
-            color: black;
+            color: $colorTerciarioTexto;
         }
     }
 
@@ -79,14 +95,14 @@ header {
         color: $colorPrimarioTexto;
 
         &:hover {
-            color: black;
+            color: $colorTerciarioTexto;
             background-color: $backgroundColorSecundario;
 
             &.active {
-                color: $colorTerciarioTexto;
+                color: black;
 
                 &:hover {
-                    color: black;
+                    color: $colorTerciarioTexto;
                 }
             }
         }
@@ -104,14 +120,14 @@ header {
         color: $colorPrimarioTexto;
 
         &:hover {
-            color: black;
+            color: $colorTerciarioTexto;
         }
 
         &.active {
-            color: $colorTerciarioTexto;
+            color: black;
 
             &:hover {
-                color: black;
+                color: $colorTerciarioTexto;
             }
         }
     }
@@ -129,13 +145,13 @@ header {
 
     nav {
         .nav-imagen {
-            width: 8%;
+            max-width: 125px;
             margin-left: 1%;
         }
     }
 
     .navbar-light .navbar-nav .nav-link:hover {
-        color: black;
+        color: $colorTerciarioTexto;
     }
 }
 
@@ -144,7 +160,7 @@ header {
     height: 400px;
     background-repeat: no-repeat;
     background-size: cover;
-    color: $colorPrimarioTexto;
+    color: $backgroundColorSecundario;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -276,8 +292,15 @@ header {
     justify-content: center;
 
     .carrusel {
-        height: 50%;
-        width: 50%;
+        max-width: 700px;
+        max-height: 400px;
+
+        .carousel-control-next-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+        }
+        .carousel-control-prev-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+        }
     }
 }
 
@@ -559,7 +582,7 @@ header {
 }
 
 .formulario {
-    height: 680px;
+    height: 780px;
     // margin-top: 8%;
     display: flex;
     // flex-direction: column;
@@ -582,7 +605,7 @@ header {
 
         h2 {
             margin: 2%;
-            color: $colorPrimarioTexto;
+            color: $backgroundColorSecundario;
         }
 
         .btn-primary {
@@ -601,7 +624,7 @@ header {
             // flex-direction: row;
             a {
                 text-decoration: none;
-                color: $colorPrimarioTexto;
+                color: $backgroundColorSecundario;
                 font-size: 150%;
             }
         }
@@ -618,7 +641,7 @@ header {
 
             p {
                 text-decoration: none;
-                color: $colorPrimarioTexto;
+                color: $backgroundColorSecundario;
                 font-size: 150%;
                 display: flex;
                 align-items: center;
@@ -656,7 +679,7 @@ header {
             button {
                 font-family: inherit;
                 font-size: 18px;
-                background: $backgroundColorSecundario;
+                background: $colorPrimarioTexto;
                 color: white;
                 padding: 0.7em 1em;
                 padding-left: 0.9em;
@@ -685,11 +708,11 @@ header {
             }
 
             button:hover svg {
-                transform: translateX(1.2em) rotate(45deg) scale(1.1);
+                transform: translateX(2.2em) rotate(45deg) scale(1.1);
             }
 
             button:hover span {
-                transform: translateX(5em);
+                transform: translateX(6em);
             }
 
             button:active {
@@ -713,12 +736,14 @@ header {
 
 .section-gracias {
     margin-top: 10%;
+
     .gracias {
         // margin-top: 30%;
         display: flex;
         align-items: center;
         justify-content: center;
-        a{
+
+        a {
             color: $colorTerciarioTexto;
             font-size: xx-large;
         }
@@ -840,7 +865,7 @@ header {
         text-transform: uppercase;
         font-size: 1.1em;
         font-weight: 600;
-        color: $backgroundColorSecundario;
+        color: $colorPrimarioTexto;
         padding: 10px 7px 0;
     }
 
@@ -1007,6 +1032,12 @@ header {
     //         height: 700px;
     //     }
     // }
+
+    header{
+        a{
+            font-size: x-large;
+        }
+    }
 }
 
 @media screen and (max-width: 1150px) {
@@ -1017,9 +1048,37 @@ header {
     //         height: 700px;
     //     }
     // }
+    header{
+        a{
+            font-size: larger;
+        }
+    }
 }
 
-@media screen and (max-width: 987px) {
+@media screen and (max-width: 991px) {
+    header{
+        a{
+            font-size: large;
+        }
+            .navbar {
+                padding: 0;
+                border: 1px solid $colorPrimarioTexto;
+        
+                .container {
+                    // width: 100%;
+        
+                    margin-left: 0;
+                    padding: 0;
+                    background-color: white;
+        
+                }
+        
+                .container-fluid{
+                    padding-top: 0;
+                }
+            }
+    }
+
     .nuestra-fabrica-imagen-mapa {
         display: flex;
         flex-direction: column;
@@ -1100,6 +1159,17 @@ header {
 
     p {
         font-size: small;
+    }
+    a{
+        font-size: small;
+    }
+
+    .conoceme button.learn-more .circle {
+        width: 2.3rem;
+        height: 2.3rem;
+        .icon.arrow {
+            left: 0.3rem;
+        }        
     }
 
     // .carrusel{
@@ -1257,7 +1327,7 @@ header {
 
     .formulario {
         .formulario-redes {
-            .btn-primary{
+            .btn-primary {
                 height: 31px;
             }
 
